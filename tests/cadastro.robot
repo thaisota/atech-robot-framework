@@ -1,9 +1,8 @@
-*** Settings ***
-Resource            ${EXECDIR}/resources/base.robot
+*** Settings ***   
+Resource    ${EXECDIR}/resources/base.robot
 Resource    ../resources/pages/signup.robot
 Resource    ../resources/base.robot
-
-Library    resources/libs/mongo.py    
+  
 #Library              RobotMongoDBLibrary.Find
 
 *** Variables ***
@@ -69,7 +68,7 @@ Email deve ser obrigatório
     Alert should be     Informe seu e-email
 
 Senha deve ser obrigatória
-    [Tags]    semSenha
+    [Tags]    senhaobr
 
     &{user}=        Create Dictionary    
     ...    name=Thais Ota
